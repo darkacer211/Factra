@@ -161,6 +161,7 @@ model/artifacts/**/checkpoints/
 # Project Specific - Data
 data/__pycache__/
 *.csv
+!data/news_dataset.csv
 
 # OS specific
 .DS_Store
