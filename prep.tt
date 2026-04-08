@@ -1,0 +1,225 @@
+AI Fake News Detection Platform — Teacher Presentation Script (English-only)
+
+How to use this:
+- Treat each “Slide” as a PPT slide.
+- Read the “Say” section out loud.
+- Do the “Show/Demo” steps live if you have time.
+- Keep the pace: ~45–60 seconds per slide for a 8–10 minute talk.
+
+------------------------------------------------------------
+Slide 1 — Title + Goal
+------------------------------------------------------------
+Title: AI-based Fake News Detection Platform (BERT + Web + Chrome Extension)
+
+Say:
+- “This project detects whether a news article is Fake or Real using a fine-tuned BERT model.”
+- “It supports two inputs: plain text and article URL.”
+- “It returns: prediction, confidence, credibility score (0–100), and an explanation.”
+
+Show/Demo:
+- Open the Chrome extension popup and point to “Analyze this page”.
+
+------------------------------------------------------------
+Slide 2 — What problem are we solving?
+------------------------------------------------------------
+Say:
+- “Fake news spreads quickly; we want an automated first-pass filter.”
+- “The goal is not perfect truth verification; it’s classification + highlighting suspicious cues.”
+- “We use NLP (BERT) because it understands context better than simple keyword rules.”
+
+Key points:
+- English-only scope (bert-base-uncased).
+- Output is probabilistic (confidence), not absolute truth.
+
+------------------------------------------------------------
+Slide 3 — High-level architecture (end-to-end)
+------------------------------------------------------------
+Say:
+- “There are 5 layers: dataset → training → saved model → Flask API → UI (web + Chrome extension).”
+- “Once trained, we don’t retrain every time; we load the saved model for inference.”
+
+Show (files/folders):
+- data/ (dataset pipeline)
+- model/ (train + predict)
+- api/ (Flask endpoints)
+- frontend/ (simple web UI)
+- extension/ (Chrome extension)
+
+------------------------------------------------------------
+Slide 4 — Dataset used (Kaggle CSV)
+------------------------------------------------------------
+Say:
+- “Dataset is CSV with columns: text and label.”
+- “Labels are mapped: REAL → 0, FAKE → 1.”
+- “We also handle dataset quality: null rows, empty text, and class distribution.”
+
+Mention:
+- “My dataset had ~3.7k rows; 8 empty rows were dropped during cleaning.”
+- “Class distribution was almost balanced.”
+
+------------------------------------------------------------
+Slide 5 — Data cleaning + quality handling
+------------------------------------------------------------
+Say:
+- “Before training, we standardize and clean the text to reduce noise.”
+- “Steps: remove URLs, remove special characters, lowercase, compress spaces.”
+- “Then we drop null/empty rows, and verify labels are valid.”
+
+Why this matters:
+- “Cleaner input improves generalization and reduces overfitting to weird artifacts.”
+
+------------------------------------------------------------
+Slide 6 — Train/Validation split (80/20)
+------------------------------------------------------------
+Say:
+- “We split data: 80% training, 20% validation.”
+- “We use stratified split when possible so both sets keep the same label ratio.”
+- “Validation metrics tell us how well the model generalizes to unseen samples.”
+
+------------------------------------------------------------
+Slide 7 — Core AI model: BERT fine-tuning
+------------------------------------------------------------
+Say:
+- “We use pretrained bert-base-uncased from HuggingFace.”
+- “We add a classification head for 2 classes: Real vs Fake.”
+- “Fine-tuning updates BERT weights on our dataset for this specific task.”
+
+Why BERT:
+- “It captures context and relationships between words, not just keywords.”
+
+------------------------------------------------------------
+Slide 8 — Training settings + metrics
+------------------------------------------------------------
+Say:
+- “We train for 2–4 epochs; in my final run I used 2 epochs for speed.”
+- “We measure: Accuracy, Precision, Recall, F1-score.”
+- “F1 is important because it balances precision and recall.”
+
+Mention actual results (from training log):
+- Accuracy ≈ 0.9987
+- Precision ≈ 0.9973
+- Recall = 1.0
+- F1 ≈ 0.9987
+
+Important honesty note:
+- “These are very high; it may indicate the dataset is ‘easy’ or has stylistic patterns.”
+- “For real-world robustness, we can improve by merging multiple datasets/domains.”
+
+------------------------------------------------------------
+Slide 9 — Model saving (so it works after restart)
+------------------------------------------------------------
+Say:
+- “After training, we save the model and tokenizer to disk.”
+- “Key files: model.safetensors, config.json, tokenizer.json, vocab.txt.”
+- “After reboot, we just load these files—no retraining needed.”
+
+Show:
+- model/artifacts/fakenews_bert/ contains the saved model.
+
+------------------------------------------------------------
+Slide 10 — Prediction output: confidence + credibility + explanation
+------------------------------------------------------------
+Say:
+- “The model outputs probabilities using softmax.”
+- “Confidence = probability for the predicted class (we display it as REAL probability in UI).”
+- “Credibility score = confidence × 100, then penalties for clickbait/suspicious cues.”
+- “Explanation highlights suspicious words like: shocking, breaking, exclusive.”
+
+Note:
+- “Explanation is heuristic + model probability, designed to be human-readable.”
+
+------------------------------------------------------------
+Slide 11 — URL input: web scraping
+------------------------------------------------------------
+Say:
+- “For a URL, we fetch the page using requests and extract paragraph text from <p> tags.”
+- “We limit text length to keep inference fast.”
+- “Then we send the extracted text to the same predictor.”
+
+Mention limitation:
+- “Some websites block scraping or load content with JavaScript; those may fail.”
+
+------------------------------------------------------------
+Slide 12 — Flask API (backend service)
+------------------------------------------------------------
+Say:
+- “We expose two endpoints:”
+- “POST /predict: accepts raw text”
+- “POST /predict_url: accepts a URL”
+- “API returns JSON with prediction, confidence, credibility_score, explanation.”
+
+Show sample response format:
+{
+  "prediction": "Fake/Real",
+  "confidence": 0.xx,
+  "credibility_score": xx,
+  "explanation": "...",
+  "suspicious_words": [...]
+}
+
+------------------------------------------------------------
+Slide 13 — Frontend + Chrome extension (user experience)
+------------------------------------------------------------
+Say:
+- “We have a simple web UI for manual testing.”
+- “The Chrome extension is the practical part: analyze the current page in one click.”
+- “It also highlights suspicious words directly on the webpage.”
+
+Demo (best):
+- Start API
+- Open a news page
+- Click extension → Analyze this page
+- Show Real/Fake + highlight + credibility.
+
+------------------------------------------------------------
+Slide 14 — How to run it tomorrow (demo checklist)
+------------------------------------------------------------
+Say:
+- “Step 1: Start API”
+  python -m api.app --model_dir model/artifacts/fakenews_bert
+- “Step 2: Open Chrome extension and analyze a page.”
+- “If API isn’t running, extension won’t show results.”
+
+Backup plan:
+- Keep one sample article text ready to paste into the web UI.
+
+------------------------------------------------------------
+Slide 15 — Improvements / future work (dataset + model)
+------------------------------------------------------------
+Say:
+- “Merge multiple datasets (different sources, topics) to generalize better.”
+- “Use better explainability: sentence-level highlighting, attention visualization, or LIME/SHAP.”
+- “Add domain credibility signals: source reputation, cross-checking claims, citation density.”
+- “Add caching so repeated URLs are faster.”
+
+------------------------------------------------------------
+Slide 16 — Limitations (important to mention)
+------------------------------------------------------------
+Say:
+- “Model learns patterns from training data; it can be biased if dataset is biased.”
+- “It can misclassify satire, opinion pieces, or very short articles.”
+- “‘Confidence’ is not absolute truth—just model probability.”
+- “Scraping can fail on some sites.”
+
+------------------------------------------------------------
+Slide 17 — Final close
+------------------------------------------------------------
+Say:
+- “This project shows a complete ML product pipeline: data prep → fine-tuning → deployment → UI/extension.”
+- “The key achievement is not only training a model, but integrating it into a usable tool.”
+
+------------------------------------------------------------
+Quick Q&A prep (common teacher questions)
+------------------------------------------------------------
+Q: Why BERT instead of TF-IDF + SVM?
+A: “BERT captures context and semantics better; TF-IDF is bag-of-words and misses meaning.”
+
+Q: What does the credibility score mean?
+A: “It’s confidence scaled to 0–100 plus penalties for clickbait cues; it’s a heuristic readability score.”
+
+Q: Why are metrics so high?
+A: “Possible dataset artifacts or easy separation. For real-world reliability we’d add more diverse datasets.”
+
+Q: Does it verify facts?
+A: “No, it predicts based on linguistic patterns; fact-checking would require external evidence and retrieval.”
+

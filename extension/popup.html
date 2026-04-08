@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Factra</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Factra</h1>
+
+      <button id="analyzeTab" class="btn">Analyze this page</button>
+      <button id="clearHighlights" class="btn secondary">Clear highlights</button>
+      <button id="openDashboard" class="btn outline">🔍 Full Analysis Dashboard</button>
+
+      <details class="details">
+        <summary class="summary">Settings</summary>
+        <label class="label" for="apiBase">API base URL</label>
+        <div class="row">
+          <input id="apiBase" class="input" type="text" placeholder="http://127.0.0.1:5000" />
+          <button id="saveApi" class="btn mini">Save</button>
+        </div>
+      </details>
+
+      <div id="status" class="status"></div>
+      <div id="result" class="result hidden"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+

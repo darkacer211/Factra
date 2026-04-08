@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Factra",
+  "version": "1.0.0",
+  "description": "Detect Fake/Real news from page text or pasted text using your local Flask API.",
+  "action": {
+    "default_title": "Fake News Detector",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+

@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e8eefc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+  width: 360px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #4f7cff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.label {
+  display: block;
+  margin: 4px 0 6px;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 238, 252, 0.2);
+  background: rgba(232, 238, 252, 0.06);
+  color: #e8eefc;
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 800;
+  background: #4f7cff;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn.mini {
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 800;
+  width: 72px;
+  flex: 0 0 auto;
+}
+
+.btn.secondary {
+  background: rgba(232, 238, 252, 0.12);
+  color: #e8eefc;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #4f7cff;
+  color: #4f7cff;
+}
+
+.btn.outline:hover {
+  background: rgba(79, 124, 255, 0.1);
+}
+
+.details {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 238, 252, 0.12);
+  padding: 8px 10px;
+  background: rgba(232, 238, 252, 0.03);
+}
+
+.summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.9;
+  min-height: 16px;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 238, 252, 0.15);
+  background: rgba(79, 124, 255, 0.08);
+  font-size: 12px;
+}
+
+.headline {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.headline.real {
+  color: #6ee7b7;
+}
+
+.headline.fake {
+  color: #fb7185;
+}
+
+.kv {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.kv strong {
+  opacity: 0.95;
+}
+
+.hidden {
+  display: none;
+}
+
+mark {
+  background: #ffdd57;
+  color: #0b1220;
+  padding: 0 3px;
+  border-radius: 4px;
+}
+

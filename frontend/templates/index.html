@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Factra — Deep Analysis Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar for History -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">F</div>
+          <h2>FACTRA</h2>
+        </div>
+        <div class="history-list">
+          <h3>Recent History</h3>
+          <div id="historyItems">
+            <!-- Dynamically populated -->
+            <p class="empty-state">No recent scans</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <header class="header">
+          <h1>Factra Analytics</h1>
+          <p class="subtitle">Premium Misinformation Intelligence Report</p>
+        </header>
+
+        <!-- Unified Analysis Report (Always Visible) -->
+        <div id="resultsContainer" class="results-container">
+          <div id="welcomeMessage" class="welcome-card card full-width">
+            <h3>Welcome to Factra Intelligence</h3>
+            <p>Please use the <strong>Factra Chrome Extension</strong> to analyze a news article. Your deep analysis results will be displayed here automatically.</p>
+          </div>
+          <!-- Left: Credibility & Confidence -->
+          <div class="result-column">
+            <div class="card gauge-card">
+              <h3>Credibility Score</h3>
+              <div class="gauge-wrapper">
+                <div id="gauge" class="gauge" style="--p: 0; --c: #4f7cff">
+                  <div class="percentage"><span id="scoreValue">0</span><small>/100</small></div>
+                </div>
+              </div>
+              <div id="predBadge" class="badge">--</div>
+            </div>
+
+            <div class="card detail-card">
+              <h3>Inference Confidence</h3>
+              <div class="progress-bar">
+                <div id="confBar" class="bar" style="width: 0%"></div>
+              </div>
+              <span id="confValue">0%</span>
+            </div>
+          </div>
+
+          <!-- Right: Linguistic Profile & Findings -->
+          <div class="result-column">
+            <div class="card linguistic-card">
+              <h3>Linguistic Profile</h3>
+              <div class="profile-grid">
+                <div class="stat-item">
+                  <label>Sentiment Tone</label>
+                  <div id="toneValue" class="value">--</div>
+                </div>
+                <div class="stat-item">
+                  <label>Readability</label>
+                  <div id="complexityValue" class="value">--</div>
+                </div>
+                <div class="stat-item">
+                  <label>Objectivity Index</label>
+                  <div id="objectivityValue" class="value">--</div>
+                </div>
+              </div>
+              <div class="fact-check-box">
+                <button id="factCheckBtn" class="btn secondary small">🔍 Google Fact-Check Search</button>
+              </div>
+            </div>
+
+            <div class="card detail-card">
+              <h3>Detailed Findings</h3>
+              <div class="explanation-box">
+                <p id="explanationText">Results will appear here...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Width: Keywords -->
+          <div class="card keywords-card full-width">
+            <h3>Suspicious Cues Detected</h3>
+            <div id="keywordsList" class="keywords-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+
