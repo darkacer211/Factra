@@ -69,6 +69,7 @@ def create_app(model_dir: str) -> Flask:
                 "credibility_score": result["credibility_score"],
                 "explanation": result["explanation"],
                 "suspicious_words": result.get("suspicious_words", []),
+                "search_query": result.get("search_query", ""),
                 **i18n_meta,
             }
         )
@@ -93,6 +94,7 @@ def create_app(model_dir: str) -> Flask:
                 "credibility_score": result["credibility_score"],
                 "explanation": result["explanation"],
                 "suspicious_words": result.get("suspicious_words", []),
+                "search_query": result.get("search_query", ""),
                 **i18n_meta,
             }
         )

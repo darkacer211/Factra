@@ -1,0 +1,174 @@
+{
+  "model_parameters": {
+    "model_name": "bert-base-uncased",
+    "epochs": 2,
+    "batch_size": 4,
+    "lr": 2e-05,
+    "max_length": 128,
+    "seed": 42
+  },
+  "validation_metrics": {
+    "eval_loss": 0.011336530558764935,
+    "eval_accuracy": 0.9986577181208054,
+    "eval_precision": 0.9973404255319149,
+    "eval_recall": 1.0,
+    "eval_f1": 0.9986684420772304,
+    "eval_runtime": 6.0163,
+    "eval_samples_per_second": 123.831,
+    "eval_steps_per_second": 31.082,
+    "epoch": 2.0
+  },
+  "shape": [
+    3721,
+    3
+  ],
+  "head": [
+    {
+      "text": "payal has accused filmmaker anurag kashyap of behaving inappropriately with her in a video that went viral she maintained her stance while speaking to etimes and said i have wanted to speak about this for a long time but today finally i thought i must get it off my head i had tweeted about my incident sometime ago when the metoo movement had happened but many people told me to delete the tweet else i would stop getting work my manager too advised me to remove the tweet i complied post that anurag blocked me on whatsapp",
+      "label": 0
+    },
+    {
+      "text": "a four minute long video of a woman criticising the government at an anti citizenship amendment act rally in delhi earlier in january is going viral with a false claim that the woman shows late prime minister atal bihari vajpayee s niece the caption in hindi translates to respected vajpayee ji s niece has finally broken her silence listen to what she has to say translated from hindi also read muslim politician disguised as a hindu in anti caa protests the video comes at a time when protests against the citizenship amendment act and a proposed national register of citizens have gone unabated for over a month in the video the woman can be seen saying the following in hindi they britishers did a lot of bad but at least they were outsiders first of all they were not ours they were not from this land they came from afar and came here to do this but still the difference between them indian government and britishers was that they britishers were educated they were not this illiterate at least they didn t do this with britishers that the government is doing with its own people why can t they understand they are indian they should talk about india they tell congress they tell others they tell us why are you silent about pakistan are we crazy that we should talk about pakistan are you not enough to talk about pakistan you are obsessed with pakistan you can t think of anything else besides pakistan whenever you speak you always speak about pakistan who will talk about india pakistanis did not elect you we elected you and we regret electing you boom also received the same video on its helpline from a user asking about its veracity the video received on the whatsapp helpline the video is also viral on facebook also read nehru indira gandhi s archival image goes viral with false claim fact check boom ran a reverse image search and found that the video was uploaded by several youtube channels nearly a week ago the captions on the video identified the woman as atiya alvi we also noticed that the boom mic held in the video showed a logo of hnp news and found the video on their youtube channel uploaded on january 3 2020 furthermore we found a post by one naziya alvi rahman who posted that the woman in the video was her sister atiya alvi naziya alvi wrote this is exactly how fake news spreads read the caption below i so badly wish it was true but it isn t she is my humble sister atiya alvi siddiqui boom contacted atiya alvi through facebook she confirmed that the woman in the video was her i had gone to mandi house for a protest and that s where this interview happened atiya told boom she also said she wouldn t describe herself as an activist but rather a concerned citizen atal bihari vajpayee s niece karuna shukla atal bihari vajpayee s niece is karuna shukla who does not look like atiya alvi siddiqui and is 70 year old congress fielded shukla in 2018 for the vidhansabha election from rajnandgaon in chattisgarh karuna shukla was a member of parliament and was a member of the bharatiya janata party but left the bjp post 2014 she has been vocal about state and other issues and accused the bjp of using atal bihari vajpayee s death for political gains in the lok sabha elections of 2019",
+      "label": 1
+    },
+    {
+      "text": "republic poll a fake twitter account imitating the arnab goswami led republic tv is angering netizens with its controversial polls as twitter users including journalists mistake it for the channel s official account the fake account republicpoll uses a logo very similar to republic tv s logo and does not mention in its bio whether it is related to republic tv or if it is a fan account twitter s rules require that a fan account or parody account should indicate the same also read did nita ambani ask for support for caa siddharth varadarajan founding editor of the wire in in a now deleted tweet had shared a screenshot of a poll by the fake account claiming it was a poll run by a nationalistic media house this is hilarious despite the desperate phrasing of the question this poll run by a nationalist media house has ended up condemning the innocent minority in jnu abvp pic twitter com gqgtzfeu26 siddharth svaradarajan january 7 2020 after several twitter users pointed out that the account was fake varadarajan later clarified that it was a parody account so i am told republicpoll is a parody account which kinda makes sense since republic tv is a parody news channel siddharth svaradarajan january 7 2020 nudge in polling via carefully placed words like goons and minority in jnu doesn t seem to work pic twitter com vfa2dfxvst andy mukherjee andymukherjee70 january 6 2020 click here to view an archive we compared the official logo of republic tv with the logo used by the fake twitter account and found that they do not match the fake account is not verified and created on april 1 2019 whereas republic tv official twitter account was created in december 2016 republic tv republic has been conducting polls on its official twitter handle tukdegangspotted is there a pattern to the protests republic republic january 6 2020 the fake account has been regularly tweeting these polls and while writing the article it has 244 tweets all of which are controversial polls it currently has 2 671 followers whereas the official republic tv twitter account has 769 lakh followers and is not following it loaded polls by republicpoll the fake account has been tweeting polls on recent issues framing it with an ideologically right wing slant click here to view an archive click here to view an archive swarabhaskar has no any valid document then the question that arises is how this lately anarkali travel all around the world without passport republic poll republicpoll january 5 2020 click here to view an archive several twitter users have taken on the account for its polls the fake account has also deleted polls that are not favorable to it despite your best attempts at trying to sway the votes by calling jnu students goons and abvp a minority people s votes show who the culprit is and who the chutiya is ghar jao kutton pic twitter com 8of3ejmt3p rutuja havaldarshinde january 6 2020",
+      "label": 1
+    },
+    {
+      "text": "delhi teen finds place on un green list turns glass into sand new delhi udit singhal who founded a startup to turn glass bottles into sand has been named among 17 people in the united nation s 2020 class of young leaders for sustainable development goals sdgs the programme is a flagship initiative that recognises the efforts of young people in driving action and galvanising others in support of un s 2030 agenda for sustainable development singhal an 18 year old who lives near mandi house told toi i feel proud to represent india along with 16 others i ll work to motivate youths and achieve sdgs i hope to be able to encourage communities to inculcate better civic sense to create sustainable living spaces the teenager attended the un function online due to the covid pandemic in the normal scenario i would have gone to new york he added singhal had founded glass2sand in 2019 as a zero waste system that turns bottles into economically viable sand in 2018 i found a pile of bottles at home during research i learnt that ragpickers were not interested in collecting glass bottles because of little demand high transportation cost and storage space so empty glass bottles often ended up at the landfills do you know it takes a million years for a glass bottle to decompose singhal then imported a machine from new zealand with a special grant from the new zealand high commissioner in india and went to work helped by 65 volunteers six diplomatic missions and four institutions collecting bottles from across delhi it takes five seconds to turn one empty glass bottle into sand we have crushed 8 000 kg of bottles into 4 800 kg of high grade silica sand so far he said this silica sand is commercially viable because it is used in construction including roads and as lining in furnaces it is more valuable than river sand in making concrete singhal studied in the british school in delhi and is currently a freshman at university college in london where he is a management sciences student other young leaders cited by jayathma wickramanayake the un secretary general s envoy on youth for leading the way in shaping a more sustainable and inclusive future for all belong to the united states turkey china pakistan peru egypt senegal bulgaria nigeria brazil liberia ireland colombia australia uganda and bangladesh",
+      "label": 0
+    },
+    {
+      "text": "delhi a high level meeting underway at residence of rajya sabha chairman venkaiah naidu over the ruckus created ani ani 1600599438000 a watershed moment in the history of indian agriculture congratulations to our hardworking farmers on the passage narendra modi narendramodi 1600595449000 for decades the indian farmer was bound by various constraints and bullied by middlemen the bills passed by parli narendra modi narendramodi 1600595492000 our agriculture sector is in desperate need of latest technology that assists the industrious farmers now with th narendra modi narendramodi 1600595705000 new delhi the rajya sabha on sunday passed two key farm bills amid a bedlam as opposition members charged towards the podium of the presiding officer flung the rule book at him tore official papers and heckled him over their demand for a division of vote trouble started when the sitting of the house was extended beyond the scheduled time to allow passage of the bills opposition members who felt such a move should be resorted to only by consensus rushed into the well shouting slogans against the government and accusing it of being anti farmer this forced agriculture minister narendra singh tomar to cut short his reply and deputy chairman harivansh took up the approval of the bills four opposition sponsored motions to send the two bills to a house panel for greater scrutiny were negated by voice vote but the congress tmc cpm and dmk members sought a division of vote on the issue as harivansh over ruled them saying division of votes can take place only when members are on their seat tmc leader derek o brien charged towards the podium thrusting the rule book into the face of the deputy chairman house marshals thwarted the move as also blocking a book that was flung towards harivansh an attempt was also made to pulls microphones away from the chair but the marshals physically stopped that from happening dmk leader tiruchi siva who along with o brien k c venugopal of congress and k k ragesh of cpm had moved resolutions for sending the bills to the select committee tore papers and flung them into the air harivansh who asked members to go back to their places and not come into the well due to the covid 19 protocol requiring physical separation first muted the audio of the live proceedings but with the ruckus continuing he adjourned the proceedings for 15 minutes when the house reassembled opposition parties chanted slogans but this did not prevent harivansh from putting the bill to voice vote as the first bill got voice approval of the house and motions for sending it to a select committee were rejected at least two members tried to climb on the table of rajya sabha officers but were pulled down both the bills were passed by voice vote and amendments moved by the opposition parties rejectedhowever the congress and other opposition party members sat in protest inside rajya sabha even after the house was adjourned for the day after the passage of the two farm bills the house sitting ends at 1pm and rajya sabha chamber has to be sanitised by 3pm when lok sabha sits for a session both the chambers of lok sabha and rajya sabha are being used for each house to allow members to follow physical distancing norms as a result lok sabha had to be adjourned till 4pm as congress members demanded that the house proceedings should not take place till rajya sabha galleries are cleared of the agitating members of the upper house meanwhile rajya sabha chairman m venkaiah naidu convened a high level meeting at his residence and is likely to take action against those who created ruckus in the upper house sources told news agency ani that rajya sabha chairman is very upset with the incident and is likely to take action against those who raised slogans against the chair and tore papers shortly after the passage of the bills sad chief sukhbir singh badal urged president ram nath kovind not to give his assent to the legislations and return them to parliament for reconsideration badal s party had earlier pulled out harsimrat kaur badal from the union cabinet in protest against the bills meanwhile prime minister narendra modi hailed parliament s nod to the two bills on sunday describing the passage as a watershed moment in the history of indian agriculture he asserted that they will ensure a complete transformation of the farm sector and empower crores of farmers in a series of tweets pm modi said these proposed laws will liberate farmers from numerous adversities as he noted that peasants were for decades bound by various constraints and bullied by middlemen he again assured farmers that the existing government support system for them will continue farmers in states like punjab and haryana have been protesting against these bills with their leaders alleging that the legislations will dismantle the existing system and leave them to the mercy of corporate interests bjp president j p nadda said the legislations will give farmers freedom in selling their produce and rid them of middlemen he also hit out at the opposition parties over the ruckus in the rajya sabha after the chair proceeded to take up the bills for passage as he termed the behaviour highly irresponsible and an attack on democracy and hoped that the house chairman will take note of that opposition members also violated covid 19 protocols by storming the well of the house he told reporters",
+      "label": 0
+    }
+  ],
+  "describe": {
+    "text_len": {
+      "count": 3721.0,
+      "mean": 2532.766729373824,
+      "std": 1855.8691122218775,
+      "min": 67.0,
+      "25%": 1507.0,
+      "50%": 2252.0,
+      "75%": 3197.0,
+      "max": 15459.0
+    },
+    "label": {
+      "count": 3721.0,
+      "mean": 0.5028218220908358,
+      "std": 0.5000592359717572,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      369,
+      1
+    ],
+    [
+      0,
+      375
+    ]
+  ],
+  "tfidf_sample": [
+    {
+      "and": 0.17149858514250882,
+      "by": 0.0,
+      "for": 0.17149858514250882,
+      "in": 0.17149858514250882,
+      "is": 0.0,
+      "of": 0.17149858514250882,
+      "on": 0.17149858514250882,
+      "that": 0.34299717028501764,
+      "the": 0.5144957554275265,
+      "to": 0.6859943405700353
+    },
+    {
+      "and": 0.2776956349391513,
+      "by": 0.05969555189384419,
+      "for": 0.1009802308869641,
+      "in": 0.3029406926608923,
+      "is": 0.20893443162845468,
+      "of": 0.25245057721741027,
+      "on": 0.15147034633044615,
+      "that": 0.22720551949566922,
+      "the": 0.7825967893739718,
+      "to": 0.15147034633044615
+    },
+    {
+      "and": 0.22777152664137804,
+      "by": 0.20197438947897736,
+      "for": 0.11388576332068902,
+      "in": 0.19930008581120578,
+      "is": 0.4039487789579547,
+      "of": 0.14235720415086128,
+      "on": 0.11388576332068902,
+      "that": 0.17082864498103353,
+      "the": 0.7402574615844787,
+      "to": 0.28471440830172257
+    },
+    {
+      "and": 0.32083260332001157,
+      "by": 0.08429495622834964,
+      "for": 0.1782403351777842,
+      "in": 0.5347210055333526,
+      "is": 0.2528848686850489,
+      "of": 0.24953646924889789,
+      "on": 0.07129613407111368,
+      "that": 0.10694420110667052,
+      "the": 0.46342487146223893,
+      "to": 0.46342487146223893
+    },
+    {
+      "and": 0.2504554769801838,
+      "by": 0.13572116683160906,
+      "for": 0.13566338336426623,
+      "in": 0.10435644874174325,
+      "is": 0.049353151575130566,
+      "of": 0.31306934622522975,
+      "on": 0.07304951411922027,
+      "that": 0.11479209361591758,
+      "the": 0.834851589933946,
+      "to": 0.27132676672853245
+    }
+  ],
+  "tfidf_features": [
+    "and",
+    "by",
+    "for",
+    "in",
+    "is",
+    "of",
+    "on",
+    "that",
+    "the",
+    "to"
+  ],
+  "correlation_matrix": {
+    "text_len": {
+      "text_len": 1.0,
+      "label": 0.10942897733843451
+    },
+    "label": {
+      "text_len": 0.10942897733843451,
+      "label": 1.0
+    }
+  },
+  "dataset_stats": {
+    "total_rows": 3721,
+    "class_counts": {
+      "1": 1871,
+      "0": 1850
+    },
+    "class_ratio": {
+      "1": 0.5028218220908358,
+      "0": 0.4971781779091642
+    }
+  }
+}

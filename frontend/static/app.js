@@ -100,7 +100,8 @@ function checkHandOff() {
     text: params.get("t"),
     tone: params.get("tone"),
     comp: params.get("comp"),
-    obj: params.get("obj")
+    obj: params.get("obj"),
+    sq: params.get("sq")
   };
 
   const welcome = document.getElementById("welcomeMessage");
@@ -152,8 +153,14 @@ function checkHandOff() {
   const factBtn = document.getElementById("factCheckBtn");
   if (factBtn) {
     factBtn.onclick = () => {
-      const query = encodeURIComponent((data.text || "").slice(0, 50));
-      window.open(`https://www.google.com/search?q=fact+check+${query}`, "_blank");
+      // Use search summary query if available, otherwise fallback to first 12 words of text
+      let query = data.sq;
+      if (!query && data.text) {
+        query = data.text.split(/\s+/).slice(0, 12).join(" ");
+      }
+      
+      const searchUrl = `https://www.google.com/search?q=fact+check+${encodeURIComponent(query || "")}`;
+      window.open(searchUrl, "_blank");
     };
   }
 

@@ -16,6 +16,37 @@ _ALL_CAPS_RE = re.compile(r"\b[A-Z]{4,}\b")
 _SENTINEL_PUNCT_RE = re.compile(r"!+")
 
 
+def _generate_search_query(text: str) -> str:
+    """
+    Generates a concise summary/claim for search.
+    Takes the first significant sentence/headline.
+    """
+    if not text:
+        return ""
+
+    # Clean whitespace
+    clean = re.sub(r"\s+", " ", text).strip()
+
+    # Simple heuristic to split sentences
+    sentences = re.split(r"(?<=[.!?])\s+", clean)
+    if not sentences:
+        return ""
+
+    first = sentences[0]
+
+    # If first sentence is very short, try merging with next
+    if len(first.split()) < 5 and len(sentences) > 1:
+        first = first + " " + sentences[1]
+
+    # Cap for search query length
+    if len(first) > 160:
+        truncated = first[:160]
+        last_space = truncated.rfind(" ")
+        first = truncated[:last_space] if last_space > 100 else truncated
+
+    return first.strip()
+
+
 def _find_clickbait_terms(text_lower: str) -> Tuple[List[str], int]:
     """
     Returns (unique_terms_found, total_occurrences_over_terms).
@@ -181,6 +212,7 @@ def predict_text(
     tone = _analyze_tone(text)
     complexity = _compute_complexity(text)
     objectivity = _detect_objectivity(text)
+    search_query = _generate_search_query(text)
 
     return {
         "prediction": pred_label,
@@ -188,6 +220,7 @@ def predict_text(
         "credibility_score": round(credibility_score, 2),
         "explanation": explanation,
         "suspicious_words": suspicious_words,
+        "search_query": search_query,
         "prob_real": prob_real,
         "prob_fake": prob_fake,
         "tone": tone,

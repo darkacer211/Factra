@@ -238,7 +238,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         c: lastResult.confidence || "",
         e: lastResult.explanation || "",
         k: (lastResult.suspicious_words || []).join(","),
-        t: (lastResult.originalText || "").slice(0, 1000) // Pass snippet
+        t: (lastResult.originalText || "").slice(0, 1000), // Pass snippet
+        sq: lastResult.search_query || ""
       });
       url += "/?" + params.toString();
     }
